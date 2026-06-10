@@ -242,12 +242,18 @@ padding:18px 48px;
 <div class="subtitulo">MIS XV</div>
 </section>
 <section class="cuando">
-<div class="star s1">✦</div>
+<div class="star" style="top:40px;right:80px;">✦</div>
 <h2>¿CUÁNDO?</h2>
 <p class="fecha">08 de Agosto - 21:30</p>
 </section>
 <section class="contador-section">
-<div class="decor"></div>
+.contador-section .decor::after{
+content:"✦";
+position:absolute;
+right:-55px;
+top:-15px;
+font-size:35px;
+}
 <h2 class="faltan">Faltan</h2>
 <div class="contador">
 <div class="item">
