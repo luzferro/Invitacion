@@ -8,180 +8,246 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap');
 body{
 margin:0;
-background:#1f1b1c;
+background:#211d1e;
 color:white;
 text-align:center;
-font-family:'Playfair Display', serif;
+font-family:'Playfair Display',serif;
 }
 section{
 position:relative;
 overflow:hidden;
-padding:70px 20px;
 }
 .portada{
-min-height:85vh;
+height:92vh;
+background:#211d1e;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:#211d1e;
+padding:20px;
 }
 .nombre{
-font-family:'Great Vibes', cursive;
-font-size:95px;
+font-family:'Great Vibes',cursive;
+font-size:88px;
 font-weight:400;
 margin:0;
-color:#f5f5f5;
-text-shadow:0 0 12px rgba(255,255,255,.35);
+color:white;
+text-shadow:0 0 16px rgba(255,255,255,.55);
 }
 .subtitulo{
-font-size:28px;
-letter-spacing:12px;
-margin-top:10px;
+font-size:25px;
+letter-spacing:11px;
+margin-top:15px;
 }
-.bola{
+.disco{
 position:absolute;
-font-size:120px;
-opacity:.9;
+width:130px;
+height:130px;
+border-radius:50%;
+border:4px solid white;
+background:
+linear-gradient(90deg, transparent 47%, white 48%, white 52%, transparent 53%),
+linear-gradient(0deg, transparent 47%, white 48%, white 52%, transparent 53%),
+repeating-linear-gradient(90deg, transparent 0 18px, white 19px 21px),
+repeating-linear-gradient(0deg, transparent 0 18px, white 19px 21px);
+box-shadow:0 0 18px rgba(255,255,255,.5);
 }
-.bola1{
-top:70px;
-left:25px;
-}
-.bola2{
-bottom:70px;
-right:35px;
-}
-.estrella{
+.disco::before{
+content:"";
 position:absolute;
-font-size:45px;
+left:50%;
+top:-75px;
+width:3px;
+height:75px;
+background:white;
+}
+.disco1{
+top:115px;
+left:45px;
+}
+.disco2{
+bottom:105px;
+right:45px;
+}
+.star{
+position:absolute;
 color:white;
-}
-.e1{top:90px;right:65px;}
-.e2{bottom:90px;left:50px;}
-.bloque-negro{
-background:#211d1e;
-padding:55px 20px;
-}
-.titulo{
 font-size:48px;
+text-shadow:0 0 12px white;
+}
+.s1{top:140px;right:80px;}
+.s2{top:170px;left:25px;}
+.s3{bottom:90px;left:65px;}
+.s4{bottom:170px;right:25px;}
+.cuando{
+background:#211d1e;
+padding:45px 20px 85px;
+}
+.cuando h2{
+font-size:50px;
 margin:0 0 35px;
-letter-spacing:1px;
 }
 .fecha{
-font-size:28px;
+font-size:29px;
 }
 .contador-section{
-background:#f8f8f8;
+background:white;
 color:black;
-padding:50px 10px 65px;
+padding:45px 8px 55px;
+}
+.contador-section .decor{
+position:absolute;
+left:0;
+top:15px;
+width:115px;
+height:115px;
+border-radius:50%;
+border:3px solid black;
+opacity:.8;
+}
+.contador-section .decor::after{
+content:"✦";
+position:absolute;
+right:-35px;
+top:25px;
+font-size:35px;
 }
 .faltan{
-font-size:60px;
-margin:0 0 30px;
+font-size:62px;
+margin:0 0 35px;
 }
 .contador{
 display:flex;
 justify-content:center;
-gap:18px;
-flex-wrap:nowrap;
+gap:10px;
 }
 .item{
-width:90px;
+width:82px;
 }
 .circulo{
-width:85px;
-height:85px;
+width:72px;
+height:72px;
 border:4px solid black;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:38px;
+font-size:30px;
 margin:auto;
 }
 .label{
-font-size:22px;
+font-size:18px;
 margin-top:8px;
 }
 .lugar{
 background:#211d1e;
-padding:55px 20px 75px;
+padding:60px 20px 85px;
 }
 .lugar h2{
-font-size:48px;
+font-size:52px;
 margin:0 0 35px;
 }
 .lugar p{
-font-size:27px;
-margin-bottom:35px;
+font-size:30px;
+line-height:1.25;
+margin-bottom:40px;
 }
 .boton{
 display:inline-block;
 background:white;
 color:black;
-font-size:34px;
+font-size:32px;
 padding:18px 55px;
-border-radius:50px;
+border-radius:60px;
 text-decoration:none;
 font-weight:700;
 }
+.lugar .brillo{
+position:absolute;
+font-size:55px;
+color:white;
+text-shadow:0 0 12px white;
+}
+.b1{left:25px;bottom:65px;}
+.b2{left:85px;bottom:35px;}
 @media(max-width:600px){
 .nombre{
-font-size:72px;
+font-size:92px;
+line-height:.9;
 }
 .subtitulo{
-font-size:21px;
-letter-spacing:9px;
+font-size:22px;
+letter-spacing:10px;
 }
-.bola{
-font-size:95px;
+.disco{
+width:115px;
+height:115px;
 }
-.titulo,.lugar h2{
-font-size:42px;
+.disco1{
+top:130px;
+left:32px;
+}
+.disco2{
+bottom:95px;
+right:28px;
+}
+.cuando{
+padding:40px 20px 80px;
+}
+.cuando h2{
+font-size:58px;
 }
 .fecha{
-font-size:24px;
+font-size:30px;
 }
 .faltan{
-font-size:52px;
+font-size:60px;
 }
 .contador{
-gap:8px;
+gap:6px;
 }
 .item{
-width:75px;
+width:78px;
 }
 .circulo{
-width:67px;
-height:67px;
-font-size:30px;
-border:3px solid black;
+width:70px;
+height:70px;
+font-size:29px;
 }
 .label{
-font-size:16px;
+font-size:17px;
+}
+.lugar h2{
+font-size:58px;
+}
+.lugar p{
+font-size:31px;
 }
 .boton{
-font-size:28px;
-padding:16px 45px;
+font-size:30px;
+padding:18px 48px;
 }
 }
 </style>
 </head>
 <body>
 <section class="portada">
-<div class="bola bola1">◩</div>
-<div class="bola bola2">◩</div>
-<div class="estrella e1">✦</div>
-<div class="estrella e2">✦</div>
+<div class="disco disco1"></div>
+<div class="disco disco2"></div>
+<div class="star s1">✦</div>
+<div class="star s2">✦</div>
+<div class="star s3">✦</div>
+<div class="star s4">✦</div>
 <h1 class="nombre">María Luz</h1>
 <div class="subtitulo">MIS XV</div>
 </section>
-<section class="bloque-negro">
-<h2 class="titulo">¿CUÁNDO?</h2>
+<section class="cuando">
+<div class="star s1">✦</div>
+<h2>¿CUÁNDO?</h2>
 <p class="fecha">08 de Agosto - 21:30</p>
 </section>
 <section class="contador-section">
+<div class="decor"></div>
 <h2 class="faltan">Faltan</h2>
 <div class="contador">
 <div class="item">
@@ -203,8 +269,10 @@ padding:16px 45px;
 </div>
 </section>
 <section class="lugar">
+<div class="brillo b1">✦</div>
+<div class="brillo b2">✦</div>
 <h2>¿DÓNDE?</h2>
-<p>Salón del Colegio De Abogados</p>
+<p>Salón del Colegio<br>De Abogados</p>
 <a class="boton" href="https://maps.app.goo.gl/PR54WQLHa5z93yK6A?g_st=ic" target="_blank">
 Cómo llegar
 </a>
