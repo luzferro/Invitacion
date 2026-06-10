@@ -3,222 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mis XV</title>
-
+<title>Mis XV - María Luz</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap');
 body{
-font-family:Arial,sans-serif;
 margin:0;
-background:#111;
+background:#1f1b1c;
 color:white;
 text-align:center;
+font-family:'Playfair Display', serif;
 }
-
 section{
-min-height:100vh;
-padding:80px 20px;
-box-sizing:border-box;
+position:relative;
+overflow:hidden;
+padding:70px 20px;
+}
+.portada{
+min-height:85vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+background:#211d1e;
 }
-
-h1{
-font-size:78px;
-color:silver;
-letter-spacing:3px;
-font-family:Georgia,serif;
+.nombre{
+font-family:'Great Vibes', cursive;
+font-size:95px;
+font-weight:400;
 margin:0;
+color:#f5f5f5;
+text-shadow:0 0 12px rgba(255,255,255,.35);
 }
-
-h2{
-color:#ddd;
+.subtitulo{
+font-size:28px;
+letter-spacing:12px;
+margin-top:10px;
 }
-
-.boton{
-display:inline-block;
-padding:15px 25px;
-margin-top:15px;
-background:white;
+.bola{
+position:absolute;
+font-size:120px;
+opacity:.9;
+}
+.bola1{
+top:70px;
+left:25px;
+}
+.bola2{
+bottom:70px;
+right:35px;
+}
+.estrella{
+position:absolute;
+font-size:45px;
+color:white;
+}
+.e1{top:90px;right:65px;}
+.e2{bottom:90px;left:50px;}
+.bloque-negro{
+background:#211d1e;
+padding:55px 20px;
+}
+.titulo{
+font-size:48px;
+margin:0 0 35px;
+letter-spacing:1px;
+}
+.fecha{
+font-size:28px;
+}
+.contador-section{
+background:#f8f8f8;
 color:black;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-border:none;
-cursor:pointer;
+padding:50px 10px 65px;
 }
-
+.faltan{
+font-size:60px;
+margin:0 0 30px;
+}
 .contador{
 display:flex;
 justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+gap:18px;
+flex-wrap:nowrap;
 }
-
-.contador div{
-background:#222;
-padding:15px;
-border-radius:15px;
-min-width:80px;
+.item{
+width:90px;
 }
-
-.azul{
-width:50px;
-height:50px;
+.circulo{
+width:85px;
+height:85px;
+border:4px solid black;
 border-radius:50%;
-background:#0047AB;
-margin:15px auto;
-border:3px solid white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:38px;
+margin:auto;
 }
-
-.alias{
-background:#222;
-padding:15px;
-border-radius:15px;
-display:inline-block;
+.label{
 font-size:22px;
-margin-top:10px;
+margin-top:8px;
+}
+.lugar{
+background:#211d1e;
+padding:55px 20px 75px;
+}
+.lugar h2{
+font-size:48px;
+margin:0 0 35px;
+}
+.lugar p{
+font-size:27px;
+margin-bottom:35px;
+}
+.boton{
+display:inline-block;
+background:white;
+color:black;
+font-size:34px;
+padding:18px 55px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+}
+@media(max-width:600px){
+.nombre{
+font-size:72px;
+}
+.subtitulo{
+font-size:21px;
+letter-spacing:9px;
+}
+.bola{
+font-size:95px;
+}
+.titulo,.lugar h2{
+font-size:42px;
+}
+.fecha{
+font-size:24px;
+}
+.faltan{
+font-size:52px;
+}
+.contador{
+gap:8px;
+}
+.item{
+width:75px;
+}
+.circulo{
+width:67px;
+height:67px;
+font-size:30px;
+border:3px solid black;
+}
+.label{
+font-size:16px;
+}
+.boton{
+font-size:28px;
+padding:16px 45px;
+}
 }
 </style>
-
 </head>
-
 <body>
-
-<section>
-<h1>MARÍA LUZ</h1>
-<p>Mis XV</p>
+<section class="portada">
+<div class="bola bola1">◩</div>
+<div class="bola bola2">◩</div>
+<div class="estrella e1">✦</div>
+<div class="estrella e2">✦</div>
+<h1 class="nombre">María Luz</h1>
+<div class="subtitulo">MIS XV</div>
 </section>
-
-<section>
-<h2>Fecha y Hora</h2>
-<p>8 de Agosto - 21:30 hs</p>
+<section class="bloque-negro">
+<h2 class="titulo">¿CUÁNDO?</h2>
+<p class="fecha">08 de Agosto - 21:30</p>
 </section>
-
-<section>
-<h2>Faltan...</h2>
-
+<section class="contador-section">
+<h2 class="faltan">Faltan</h2>
 <div class="contador">
-
-<div>
-<h3 id="dias">0</h3>
-<p>Días</p>
+<div class="item">
+<div class="circulo" id="dias">0</div>
+<div class="label">Días</div>
 </div>
-
-<div>
-<h3 id="horas">0</h3>
-<p>Horas</p>
+<div class="item">
+<div class="circulo" id="horas">0</div>
+<div class="label">Horas</div>
 </div>
-
-<div>
-<h3 id="minutos">0</h3>
-<p>Min</p>
+<div class="item">
+<div class="circulo" id="minutos">0</div>
+<div class="label">Minutos</div>
 </div>
-
-<div>
-<h3 id="segundos">0</h3>
-<p>Seg</p>
+<div class="item">
+<div class="circulo" id="segundos">0</div>
+<div class="label">Segundos</div>
 </div>
-
 </div>
-
 </section>
-
-<section>
-
-<h2>Lugar</h2>
-
-<p>SALÓN DE EVENTOS</p>
-
-<a class="boton"
-href="https://maps.app.goo.gl/PR54WQLHa5z93yK6A?g_st=ic"
-target="_blank">
+<section class="lugar">
+<h2>¿DÓNDE?</h2>
+<p>Salón del Colegio De Abogados</p>
+<a class="boton" href="https://maps.app.goo.gl/PR54WQLHa5z93yK6A?g_st=ic" target="_blank">
 Cómo llegar
 </a>
-
 </section>
-
-<section>
-
-<h2>Dress Code</h2>
-
-<p>Elegante</p>
-
-<div class="azul"></div>
-
-<p>
-El color azul está reservado para la quinceañera.
-</p>
-
-</section>
-
-<section>
-
-<h2>Regalo</h2>
-
-<p>
-Con tu presencia es suficiente.
-Pero si deseás hacerme un regalo,
-podés transferir al siguiente alias:
-</p>
-
-<div class="alias" id="alias">
-luzferro
-</div>
-
-<br><br>
-
-<button class="boton" onclick="copiarAlias()">
-Copiar alias
-</button>
-
-</section>
-
-<section>
-
-<h2>Confirmación</h2>
-
-<p>
-Por favor confirmar asistencia
-hasta el 25 de julio.
-</p>
-
-</section>
-
 <script>
-
-const fechaEvento =
-new Date("August 8, 2026 21:30:00").getTime();
-
+const fechaEvento = new Date("August 8, 2026 21:30:00").getTime();
 setInterval(function(){
-
 const ahora = new Date().getTime();
-
-const diferencia =
-fechaEvento - ahora;
-
+const diferencia = fechaEvento - ahora;
 document.getElementById("dias").innerHTML =
 Math.floor(diferencia/(1000*60*60*24));
-
 document.getElementById("horas").innerHTML =
 Math.floor((diferencia%(1000*60*60*24))/(1000*60*60));
-
 document.getElementById("minutos").innerHTML =
 Math.floor((diferencia%(1000*60*60))/(1000*60));
-
 document.getElementById("segundos").innerHTML =
 Math.floor((diferencia%(1000*60))/1000);
-
 },1000);
-
-function copiarAlias(){
-navigator.clipboard.writeText("luzferro");
-alert("Alias copiado");
-}
-
 </script>
-
 </body>
 </html>
-
