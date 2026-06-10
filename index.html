@@ -1,1 +1,215 @@
-<h1>Mi invitación</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis XV</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#111;
+color:white;
+text-align:center;
+}
+
+section{
+padding:60px 20px;
+border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+h1{
+font-size:50px;
+}
+
+h2{
+color:#ddd;
+}
+
+.boton{
+display:inline-block;
+padding:15px 25px;
+margin-top:15px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+border:none;
+cursor:pointer;
+}
+
+.contador{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.contador div{
+background:#222;
+padding:15px;
+border-radius:15px;
+min-width:80px;
+}
+
+.azul{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#0047AB;
+margin:15px auto;
+border:3px solid white;
+}
+
+.alias{
+background:#222;
+padding:15px;
+border-radius:15px;
+display:inline-block;
+font-size:22px;
+margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<section>
+<h1>MARÍA LUZ</h1>
+<p>Mis XV</p>
+</section>
+
+<section>
+<h2>Fecha y Hora</h2>
+<p>8 de Agosto - 21:30 hs</p>
+</section>
+
+<section>
+<h2>Faltan...</h2>
+
+<div class="contador">
+
+<div>
+<h3 id="dias">0</h3>
+<p>Días</p>
+</div>
+
+<div>
+<h3 id="horas">0</h3>
+<p>Horas</p>
+</div>
+
+<div>
+<h3 id="minutos">0</h3>
+<p>Min</p>
+</div>
+
+<div>
+<h3 id="segundos">0</h3>
+<p>Seg</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Lugar</h2>
+
+<p>SALÓN DE EVENTOS</p>
+
+<a class="boton"
+href="https://maps.app.goo.gl/PR54WQLHa5z93yK6A?g_st=ic"
+target="_blank">
+Cómo llegar
+</a>
+
+</section>
+
+<section>
+
+<h2>Dress Code</h2>
+
+<p>Elegante</p>
+
+<div class="azul"></div>
+
+<p>
+El color azul está reservado para la quinceañera.
+</p>
+
+</section>
+
+<section>
+
+<h2>Regalo</h2>
+
+<p>
+Con tu presencia es suficiente.
+Pero si deseás hacerme un regalo,
+podés transferir al siguiente alias:
+</p>
+
+<div class="alias" id="alias">
+luzferro
+</div>
+
+<br><br>
+
+<button class="boton" onclick="copiarAlias()">
+Copiar alias
+</button>
+
+</section>
+
+<section>
+
+<h2>Confirmación</h2>
+
+<p>
+Por favor confirmar asistencia
+hasta el 25 de julio.
+</p>
+
+</section>
+
+<script>
+
+const fechaEvento =
+new Date("August 8, 2026 21:30:00").getTime();
+
+setInterval(function(){
+
+const ahora = new Date().getTime();
+
+const diferencia =
+fechaEvento - ahora;
+
+document.getElementById("dias").innerHTML =
+Math.floor(diferencia/(1000*60*60*24));
+
+document.getElementById("horas").innerHTML =
+Math.floor((diferencia%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutos").innerHTML =
+Math.floor((diferencia%(1000*60*60))/(1000*60));
+
+document.getElementById("segundos").innerHTML =
+Math.floor((diferencia%(1000*60))/1000);
+
+},1000);
+
+function copiarAlias(){
+navigator.clipboard.writeText("luzferro");
+alert("Alias copiado");
+}
+
+</script>
+
+</body>
+</html>
+
