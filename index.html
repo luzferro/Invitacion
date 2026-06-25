@@ -324,6 +324,161 @@ border:1.5px solid white;
 
 </section>
 </section>
+<section style="
+background:white;
+color:black;
+padding:75px 20px;
+text-align:center;
+font-family:'Montserrat',sans-serif;
+">
+
+<div style="
+width:42px;
+height:42px;
+border:1.5px solid black;
+border-radius:10px;
+margin:0 auto 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+">
+🎁
+</div>
+
+<h2 style="
+font-size:24px;
+font-weight:300;
+letter-spacing:2px;
+margin-bottom:18px;
+">
+REGALO
+</h2>
+
+<p style="
+font-size:15px;
+font-weight:300;
+line-height:1.8;
+letter-spacing:.5px;
+margin-bottom:28px;
+">
+Tu presencia es lo más importante.<br>
+Si además deseás hacerme un regalo,<br>
+podés hacerlo aquí.
+</p>
+
+<p style="
+font-size:13px;
+font-weight:300;
+letter-spacing:2px;
+margin-bottom:12px;
+">
+ALIAS
+</p>
+
+<div id="aliasBox"
+style="
+display:inline-block;
+padding:14px 28px;
+border:1px solid #bfbfbf;
+border-radius:14px;
+font-size:18px;
+letter-spacing:1px;
+margin-bottom:22px;
+background:#fafafa;
+">
+luzferro
+</div>
+
+<br>
+
+<button
+onclick="copiarAlias()"
+id="btnAlias"
+style="
+padding:13px 36px;
+border:1px solid black;
+border-radius:50px;
+background:white;
+color:black;
+font-size:13px;
+letter-spacing:1.5px;
+cursor:pointer;
+font-family:'Montserrat',sans-serif;
+">
+
+COPIAR ALIAS
+
+</button>
+
+</section>
+<section style="
+background:black;
+color:white;
+padding:75px 20px;
+text-align:center;
+font-family:'Montserrat',sans-serif;
+">
+
+<h2 style="
+font-size:24px;
+font-weight:300;
+letter-spacing:2px;
+margin-bottom:18px;
+">
+CONFIRMAR ASISTENCIA
+</h2>
+
+<p style="
+font-size:15px;
+font-weight:300;
+line-height:1.8;
+letter-spacing:.5px;
+margin-bottom:8px;
+">
+Confirmá tu asistencia hasta el
+</p>
+
+<p style="
+font-size:18px;
+font-weight:600;
+letter-spacing:1px;
+margin-bottom:28px;
+">
+22 DE JULIO
+</p>
+
+<a
+href="https://wa.me/543875417125?text=Hola%20Luz,%20te%20confirmo%20mi%20asistencia%20a%20tus%20XV.%0A%0AMi%20nombre%20completo%20es:%20%0A%0AMi%20DNI%20es:%20"
+style="
+display:inline-block;
+padding:14px 36px;
+border:1px solid white;
+border-radius:50px;
+background:transparent;
+color:white;
+text-decoration:none;
+font-size:13px;
+letter-spacing:1.5px;
+font-family:'Montserrat',sans-serif;
+">
+CONFIRMAR POR WHATSAPP </a>
+
+</section>
+
+<script>
+function copiarAlias(){
+navigator.clipboard.writeText("luzferro");
+
+const boton=document.getElementById("btnAlias");
+
+boton.innerHTML="✓ COPIADO";
+
+setTimeout(function(){
+boton.innerHTML="COPIAR ALIAS";
+},2000);
+}
+</script>
 
 <script>
 const fechaEvento = new Date("August 8, 2026 21:00:00").getTime();
